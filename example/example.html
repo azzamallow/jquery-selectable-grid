@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Example selectable grid</title>
+    <link href="../jquery.selectable-grid.css" rel="stylesheet">
+    <script src="jquery-1.7.2.js"></script>
+    <script src="../jquery.selectable-grid.js"></script>
+
+    <style>
+        .selectable-grid {
+            width: 880px;
+        }
+
+        .selectable-grid-column {
+            text-align: center;
+            font-size: 80px;
+        }
+
+        .selectable-grid-column span {
+            position: relative;
+            top: 50px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $('.selectable-grid-column').click(function () {
+                var text = [];
+                $('#alphabet-grid').selectableGrid().selected().each(function (index, element) {
+                    text.push($(element).text().trim());
+                });
+
+                $('#alphabet-grid-selected').text('Selected items: ' + text.join(', '));
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="alphabet-grid-selected">Selected items: </div>
+    <div id="alphabet-grid" class="selectable-grid" data-multiple="true">
+        <div class="selectable-grid-row">
+            <div class="selectable-grid-column"><span>A</span></div>
+            <div class="selectable-grid-column"><span>B</span></div>
+            <div class="selectable-grid-column"><span>C</span></div>
+            <div class="selectable-grid-column"><span>D</span></div>
+        </div>
+        <div class="selectable-grid-row">
+            <div class="selectable-grid-column"><span>E</span></div>
+            <div class="selectable-grid-column"><span>F</span></div>
+            <div class="selectable-grid-column"><span>G</span></div>
+            <div class="selectable-grid-column"><span>H</span></div>
+        </div>
+        <div class="selectable-grid-row">
+            <div class="selectable-grid-column"><span>I</span></div>
+            <div class="selectable-grid-column"><span>J</span></div>
+            <div class="selectable-grid-column"><span>K</span></div>
+            <div class="selectable-grid-column"><span>L</span></div>
+        </div>
+        <div class="selectable-grid-row">
+            <div class="selectable-grid-column"><span>M</span></div>
+            <div class="selectable-grid-column"><span>N</span></div>
+            <div class="selectable-grid-column"><span>O</span></div>
+            <div class="selectable-grid-column"><span>P</span></div>
+        </div>
+        <div class="selectable-grid-row">
+            <div class="selectable-grid-column"><span>Q</span></div>
+            <div class="selectable-grid-column"><span>R</span></div>
+            <div class="selectable-grid-column"><span>S</span></div>
+            <div class="selectable-grid-column"><span>T</span></div>
+        </div>
+        <div class="selectable-grid-row">
+            <div class="selectable-grid-column"><span>U</span></div>
+            <div class="selectable-grid-column"><span>V</span></div>
+            <div class="selectable-grid-column"><span>W</span></div>
+            <div class="selectable-grid-column"><span>X</span></div>
+        </div>
+        <div class="selectable-grid-row">
+            <div class="selectable-grid-column"><span>Y</span></div>
+            <div class="selectable-grid-column"><span>Z</span></div>
+        </div>
+    </div>
+</body>
+</html>
