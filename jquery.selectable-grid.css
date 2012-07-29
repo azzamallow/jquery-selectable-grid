@@ -1,3 +1,7 @@
+.selectable-grid-row {
+	float: left;
+}
+
 .selectable-grid-column {
 	position: relative;
 	float: left;
