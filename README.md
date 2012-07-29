@@ -1,22 +1,20 @@
-jquery-selectable-grid
-======================
+# jquery-selectable-grid
 
 jQuery plugin to create a grid layout which has selectable elements.
 
-usage
-=====
+## usage
 
-1. Include both the javacsript and css file into your project
+- Include both the javacsript and css file into your project
 
-2. Create the HTML structure of the grid itself. 
+- Create the HTML structure of the grid itself. 
 
-Define a grid with the `selectable-grid` class
-Define a row with the `selectable-grid-row` class
-Define a column with the `selectable-grid-column` class
+* Define a grid with the `selectable-grid` class
+* Define a row with the `selectable-grid-row` class
+* Define a column with the `selectable-grid-column` class
 
 For example:
 
-    <div id="tech-stack" class="selectable-grid">
+    <div id="my-grid" class="selectable-grid">
         <div class="selectable-grid-row">
             <div class="selectable-grid-column">
                 First grid item
@@ -33,7 +31,13 @@ For example:
         </div>
     </div>
 
-3. If you would like to grab the selected items from the grid, you can do the following to grab all the elements.
+By default the grid will only have a single item that can be selected. If you would like multiple items in the grid to be selected, provide a `data-multiple="true"` when creating the markup.
 
-    $('#my-grid').selectableGrid().selected();
+    <div class="selectable-grid" data-multiple="true">
+        ...
+    </div>
+
+- If you would like to grab the selected items from the grid, you can do the following to grab all the elements.
+
+    `$('#my-grid').selectableGrid().selected();`
 
