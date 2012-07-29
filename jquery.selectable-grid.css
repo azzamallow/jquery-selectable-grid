@@ -26,6 +26,10 @@
 	opacity: 0.5;
 }
 
+.selectable-grid-column:hover .selector {
+	opacity: 0.3;	
+}
+
 .selectable-grid-column {
 	margin: 10px;
 }
