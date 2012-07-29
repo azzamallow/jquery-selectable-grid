@@ -2,7 +2,7 @@
 
 jQuery plugin to create a grid layout which has selectable elements.
 
-## Support
+## support
 
 This plugin has only been tested in Google Chrome at this point.
 
