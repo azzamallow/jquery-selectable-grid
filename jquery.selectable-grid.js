@@ -6,9 +6,6 @@
             // Can multiple items in the grid can be selected?
             var multiple = $el.attr('data-multiple') === 'true';
 
-            // Read only the first row to determine how many columns per row
-            var columnsPerRow = $el.find('.selectable-grid-row:first-child .selectable-grid-column').length;
-
             $el.find('.selectable-grid-column').each(function (index, element) {
                 var column = $(element);
 
