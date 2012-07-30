@@ -25,14 +25,18 @@
 
     <script>
         $(document).ready(function () {
-            $('.selectable-grid-column').click(function () {
+            var updateSelected = function () {
                 var text = [];
                 $('#alphabet-grid').selectableGrid().selected().each(function (index, element) {
                     text.push($(element).text().trim());
                 });
 
                 $('#alphabet-grid-selected').text('Selected items: ' + text.join(', '));
-            });
+            };
+
+            $('.selectable-grid-column').click(updateSelected);
+
+            updateSelected();            
         });
     </script>
 </head>
@@ -40,9 +44,9 @@
     <div id="alphabet-grid-selected">Selected items: </div>
     <div id="alphabet-grid" class="selectable-grid" data-multiple="true">
         <div class="selectable-grid-row">
-            <div class="selectable-grid-column"><span>A</span></div>
-            <div class="selectable-grid-column"><span>B</span></div>
-            <div class="selectable-grid-column"><span>C</span></div>
+            <div class="selectable-grid-column selected"><span>A</span></div>
+            <div class="selectable-grid-column selected"><span>B</span></div>
+            <div class="selectable-grid-column selected"><span>C</span></div>
             <div class="selectable-grid-column"><span>D</span></div>
         </div>
         <div class="selectable-grid-row">
