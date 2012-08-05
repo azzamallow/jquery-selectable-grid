@@ -13,6 +13,11 @@
                 column.prepend('<div class="selector"></div>');
 
                 column.click(function (event) {
+                    // Ignore if the item is disabled
+                    if (column.hasClass('disabled')) {
+                        return;
+                    }
+
                     // Clear all selected options only a single item can be selected
                     if (!multiple && !column.hasClass('selected')) {
                         $el.find('.selectable-grid-column').removeClass('selected');    
