@@ -18,6 +18,11 @@
                         return;
                     }
 
+                    // Clear all selected options belonging to the current group
+                    if (column.data().group !== undefined) {
+                        $el.find('[data-group="' + column.data().group + '"]').removeClass('selected');    
+                    }
+
                     // Clear all selected options only a single item can be selected
                     if (!multiple && !column.hasClass('selected')) {
                         $el.find('.selectable-grid-column').removeClass('selected');    
